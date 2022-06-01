@@ -5,20 +5,20 @@
 # this allows caddy to publish services via this port
 
 
-https://rpc.harpoon-3.highlander-nodes.net {
-   reverse_proxy http://YOUR-IP-ADD-HERE:26867 {
+https://rpc.juno.highlander-nodes.net {
+   reverse_proxy http://YOUR-IP-ADD-HERE {
        header_down Access-Control-Allow-Origin *
    }
    log {
-       output file /var/log/caddy/rpc.harpoon-3.highlander-nodes.net.log
+       output file /var/log/caddy/rpc.juno.highlander-nodes.net.log
    }
 }
 
-https://api.harpoon-3.highlander-nodes.net {
-   reverse_proxy http://YOUR-IP-HERE:1527 {
+https://api.juno.highlander-nodes.net {
+   reverse_proxy http://YOUR-IP-HERE {
        header_down Access-Control-Allow-Origin *
    }
    log {
-       output file /var/log/caddy/api.harpoon-3.highlander-nodes.net.log
+       output file /var/log/caddy/api.juno.highlander-nodes.net.log
    }
 }
